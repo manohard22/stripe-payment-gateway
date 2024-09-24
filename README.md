@@ -2,7 +2,11 @@
 Sample stripe payment gateway
 
 Setup steps: 
-git clone https://github.com/manohard22/stripe-payment-gateway.git
-cd stripe-payment-gateway
-composer require stripe/stripe-php
-php -S localhost:8000
+1. git clone https://github.com/manohard22/stripe-payment-gateway.git
+
+2. cd stripe-payment-gateway
+
+3. composer require stripe/stripe-php
+
+4. php -S localhost:8000
+
