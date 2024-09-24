@@ -8,16 +8,7 @@ $config = require_once 'config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stripe Payment Example</title>
     <script src="https://js.stripe.com/v3/"></script>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-        #payment-form { max-width: 500px; margin: 0 auto; }
-        .form-row { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; }
-        input[type="text"], input[type="number"], input[type="email"] { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
-        #card-element { padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
-        button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
-        #card-errors { color: #fa755a; margin-top: 10px; }
-    </style>
+    <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
     <h1>Stripe Payment Example</h1>
