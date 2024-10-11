@@ -57,10 +57,6 @@
             <h2>Collecting Payments with Stripe Terminal</h2>
             <p>Select a reader and input an amount for the transaction.</p>
             
-            <p><strong>Payment Intent ID:</strong> <span id="payment-intent-id"></span></p>
-            <p><strong>Payment Intent Status:</strong> <span id="payment-intent-status"></span></p>
-            <p><strong>Reader Status:</strong> <span id="reader-status"></span></p>
-
             <label for="reader-select">Select Reader:</label>
             <select id="reader-select" class="sr-select">
                 <option value="" selected disabled>Select a reader</option>
@@ -78,11 +74,11 @@
 
             <div class="button-row">
                 <button id="process-button" disabled>Process Payment</button>
-                <button id="capture-button" disabled>Capture Payment</button>
+                <!-- <button id="capture-button" disabled>Capture Payment</button> -->
             </div>
 
             <div class="button-row">
-                <button id="simulate-payment-button" type="button" disabled>Simulate Payment</button>
+                <!-- <button id="simulate-payment-button" type="button" disabled>Simulate Payment</button> -->
                 <button id="cancel-button" type="button">Cancel</button>
             </div>
 
