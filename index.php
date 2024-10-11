@@ -1,27 +1,43 @@
 <?php
 session_start();
 require_once __DIR__ . '/controllers/PaymentController.php';
+require_once __DIR__ . '/controllers/StripeTerminalController.php';
 
-$controller = new PaymentController();
+$paymentController = new PaymentController();
+$stripeTerminalController = new StripeTerminalController();
 
 $action = $_GET['action'] ?? 'showForm';
 
 switch ($action) {
     case 'showForm':
-        $controller->showPaymentForm();
+        $paymentController->showPaymentForm();
         break;
     case 'process_details':
-        $controller->processDetails();
+        $paymentController->processDetails();
         break;
     case 'show_credit_card_form':
-        $controller->showCreditCardForm();
+        $paymentController->showCreditCardForm();
         break;
     case 'success':
-        $controller->showSuccess();
+        $paymentController->showSuccess();
         break;
     case 'error':
-        $controller->showError();
+        $paymentController->showError();
         break;
+        
+    case 'showTerminal':
+        $stripeTerminalController->showTerminal();
+        break;
+    case 'createPayment':
+        $stripeTerminalController->createPayment();
+        break;
+    case 'capturePayment':
+        $stripeTerminalController->capturePayment();
+        break;
+    case 'simulatePayment':
+        $stripeTerminalController->simulatePayment();
+        break;
+        
     default:
         header('HTTP/1.0 404 Not Found');
         echo "Page not found";

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Details</title>
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Enter Payment Details</h1>
         <form id="payment-details-form" action="index.php?action=process_details" method="POST">
             <div class="form-group">
-                <label for="amount">Amount (USD):</label>
+                <label for="amount">Amount (SGD):</label>
                 <input type="number" id="amount" name="amount" step="0.01" required>
             </div>
             <div class="form-group">
