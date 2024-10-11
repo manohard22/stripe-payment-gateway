@@ -56,6 +56,11 @@ class StripeTerminalModel {
         return $this->makeApiRequest($url, 'POST', $data);
     }
 
+    public function getReaderStatus($readerId) {
+        $url = STRIPE_TERMINAL_URL . '/' . $readerId;
+        return $this->makeApiRequest($url);
+    }
+
     public function capturePayment($paymentIntentId) {
         $url = STRIPE_PAYMENT_INTENTS_URL . '/' . $paymentIntentId . '/capture';
         return $this->makeApiRequest($url, 'POST');

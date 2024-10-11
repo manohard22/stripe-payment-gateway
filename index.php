@@ -31,6 +31,9 @@ switch ($action) {
     case 'createPayment':
         $stripeTerminalController->createPayment();
         break;
+    case 'checkPaymentStatus':
+        $stripeTerminalController->checkPaymentStatus();
+        break;
     case 'capturePayment':
         $stripeTerminalController->capturePayment();
         break;
