@@ -47,6 +47,7 @@ class PaymentController {
             $result = $this->model->getPaymentIntent($_GET['payment_intent']);
             if ($result['status']) {
                 $paymentIntent = $result['data'];
+                $transactionId = $_SESSION['transaction_id'] ?? 'N/A';
                 require __DIR__ . '/../views/success.php';
             } else {
                 $_SESSION['error'] = $result['error'];

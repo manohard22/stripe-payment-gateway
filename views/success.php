@@ -10,7 +10,7 @@ if (!isset($paymentIntent) || !is_array($paymentIntent)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Successful</title>
-    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
     <div class="container">
@@ -29,6 +29,10 @@ if (!isset($paymentIntent) || !is_array($paymentIntent)) {
             <?php endif; ?>
         </div>
         <a href="index.php" class="button">Make Another Payment</a>
+    <ul>
+        <li><a href="index.php">Return to Home</a></li>
+        <li><a href="index.php?action=terminal">Go to Stripe Terminal</a></li>
+    </ul>
     </div>
 </body>
 </html>
