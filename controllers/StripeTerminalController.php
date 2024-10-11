@@ -46,7 +46,7 @@ class StripeTerminalController {
     
         try {
             $paymentIntent = $this->paymentModel->getPaymentIntent($paymentIntent_id);
-            print_r($paymentIntent);
+            //print_r($paymentIntent);
     
             if ($paymentIntent['status'] === 'requires_capture') {
                 $capturedIntent = $this->stripeTerminalModel->capturePayment($paymentIntent_id);
