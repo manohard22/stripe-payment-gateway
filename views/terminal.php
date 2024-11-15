@@ -61,9 +61,15 @@
             <select id="reader-select" class="sr-select">
                 <option value="" selected disabled>Select a reader</option>
                 <?php if (!empty($readers) && is_array($readers)): ?>
-                    <?php foreach ($readers["data"] as $reader): ?>
-                        <option value="<?= htmlspecialchars($reader['id']) ?>"><?= htmlspecialchars($reader['label']) ?> (<?= htmlspecialchars($reader['id']) ?>)</option>
-                    <?php endforeach; ?>
+                    <?php 
+                    $first = true;
+                    foreach ($readers["data"] as $reader): 
+                    ?>
+                        <option value="<?= htmlspecialchars($reader['id']) ?>" <?= $first ? 'selected' : '' ?>><?= htmlspecialchars($reader['label']) ?> (<?= htmlspecialchars($reader['id']) ?>)</option>
+                    <?php 
+                    $first = false;
+                    endforeach; 
+                    ?>
                 <?php else: ?>
                     <option disabled>No readers available</option>
                 <?php endif; ?>
